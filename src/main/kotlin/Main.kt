@@ -3,14 +3,11 @@ package net.jsbase.helloworld
 import net.jsbase.helloworld.domains.TransactionType
 import net.jsbase.helloworld.models.Transaction
 import net.jsbase.helloworld.services.BalanceService
-import java.text.DecimalFormat
-import java.text.DecimalFormatSymbols
 import java.text.NumberFormat
 import java.time.LocalDate
 import java.util.Currency
 import java.util.Locale
 import java.util.UUID
-import javax.swing.text.NumberFormatter
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.

@@ -9,9 +9,9 @@ To get started with Kotlin, you can write a simple "Hello, World!" program.
 
 ## 2. Working with JSON Files
 
-- [ ] Data Structure with Kotlin Data Classes: Data Types, Classes, Properties
-- [ ] Error Handling: Try-Catch, Null Safety
-- [ ] File I/O: Reading and Writing Files
+- [x] Data Structure with Kotlin Data Classes: Data Types, Classes, Properties
+- [x] Error Handling: Try-Catch, Null Safety
+- [x] File I/O: Reading and Writing Files
 - [ ] Reading JSON Files
 - [ ] Writing JSON Files
 - [ ] Example: Reading and Writing JSON Files

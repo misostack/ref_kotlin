@@ -46,3 +46,10 @@ To get started with Kotlin, you can write a simple "Hello, World!" program.
   }
 }
 ```
+
+| Method           | Input Type  | Typical Use Case                  | Key Feature               |
+| ---------------- | ----------- | --------------------------------- | ------------------------- |
+| `writeText`      | `String`    | Simple text files                 | One-liner, overwrites     |
+| `writeBytes`     | `ByteArray` | Binary data (images, PDFs)        | Handles raw bytes         |
+| `printWriter`    | Writer API  | Formatted output (println/printf) | Easy formatting           |
+| `bufferedWriter` | Writer API  | Large text files                  | Efficient buffered writes |

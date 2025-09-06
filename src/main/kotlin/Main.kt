@@ -8,6 +8,14 @@ import java.time.LocalDate
 import java.util.Currency
 import java.util.Locale
 import java.util.UUID
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.Json
+
+@Serializable
+data class Topic(
+    val id: Long,
+    val name: String
+)
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -33,6 +41,15 @@ fun helloWorld(args: Array<String>) {
         // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
         println("i = $i")
     }
+}
+
+fun jsonDemo(){
+    // Serialization
+    val json_data = Json.encodeToString(Topic(1, "Kotlin"))
+    println(json_data)
+    // Deserialization
+    val topic = Json.decodeFromString<Topic>(json_data)
+    println("id:${topic.id}\nname:${topic.name}")
 }
 
 fun newTransaction(amount: Int, date: String, type: TransactionType, description: String = ""): Transaction {
@@ -111,7 +128,7 @@ fun balanceMananagement() {
 }
 
 fun main(args: Array<String>) {
-
+    jsonDemo()
     // helloWorld(args)
-    balanceMananagement()
+    // balanceMananagement()
 }

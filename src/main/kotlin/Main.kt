@@ -10,6 +10,7 @@ import java.util.Locale
 import java.util.UUID
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
+import java.util.Random
 
 @Serializable
 data class Topic(
@@ -127,8 +128,56 @@ fun balanceMananagement() {
     println("Balance: ${formatCurrencyWithCommas(balanceService.getBalance(), balanceService.currency)}")
 }
 
+fun sayHello(){
+
+    var name: String = ""
+    while (name.isBlank()) {
+        println("What is your name?")
+        name = readln()
+    }
+    println("Hello, $name!")
+    println("Please enter your age:")
+    val age = readln().toIntOrNull()
+    if (age != null) {
+        println("You are $age years old.")
+    } else {
+        println("Invalid age input.")
+    }
+    val fruits = listOf("Apple", "Banana", "Orange", "Grapes")
+    println("Which fruit do you like?")
+    for ((index, fruit) in fruits.withIndex()) {
+        println("${index + 1}. $fruit")
+    }
+    val choice = readln().toIntOrNull()
+    if (choice != null && choice in 1..fruits.size) {
+        println("You like ${fruits[choice - 1]}.")
+    }
+    when (choice) {
+        1 -> println("Apple is good for health.")
+        2 -> println("Banana is rich in potassium.")
+        3 -> println("Orange is a good source of vitamin C.")
+        4 -> println("Grapes are high in antioxidants.")
+        else -> println("No information available.")
+    }
+    // random a number between 1 and 100
+    val randomFruit = Random().nextInt(fruits.size)
+    println("How good ${fruits.elementAt(randomFruit)} is?")
+    val answer = readln()
+    println("You rated $randomFruit with $answer.")
+    var odds = ""
+    for (i in 1..10 step 2) {
+        odds = "$odds $i"
+    }
+    println(odds)
+    fruits.map { it.lowercase() }.forEach { println(it) }
+    for (c in 'A' ..'Z') {
+        print("$c ")
+    }
+}
+
 fun main(args: Array<String>) {
-    jsonDemo()
+    // jsonDemo()
     // helloWorld(args)
     // balanceMananagement()
+    sayHello()
 }
